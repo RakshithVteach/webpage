@@ -102,7 +102,19 @@
                     </div>
                 </div>
             </div>
+
+           
     </div>
+            <div class="div-bottom">
+               <CardCompHome
+                v-for="logos in logo"
+                :key="logos.id"
+                :logoSrc ="logos.logoSrc"
+                :title = "logos.title"
+                :subTitle = "logos.subTitle"
+               />
+
+            </div>
 
     <Footer123U />
 </template>
@@ -111,15 +123,66 @@
 import NavBar from './NavBar.vue'
 import Footer123U from './Footer123U.vue'
 import styles from "../components/Styles/HomeStyle.css"
+import CardCompHome from './CardCompHome.vue'
 
 
     export default{
         style : styles,
         name : 'Home123U',
         components:{
-            NavBar,
-            Footer123U
-        },
+    NavBar,
+    Footer123U,
+    CardCompHome,
+                },
+                data()
+                    {
+                    return{
+                            logo:[
+                                {
+                                    id: 1,
+                                    logoSrc : require('@/assets/lecture.png'),
+                                    title : "Teaching",
+                                    subTitle : "asjfbaf",
+
+                                },
+                                {
+                                    id: 2,
+                                    logoSrc : require('@/assets/photo.png'),
+                                    title : "Studio",
+                                    subTitle : "asjfbaf",
+
+                                },
+                                {
+                                    id: 3,
+                                    logoSrc : require('@/assets/data-complexity.png'),
+                                    title : "System",
+                                    subTitle : "asjfbaf",
+
+                                },
+                                {
+                                    id: 4,
+                                    logoSrc : require('@/assets/console.png'),
+                                    title : "Editing",
+                                    subTitle : "asjfbaf",
+
+                                },
+                                {
+                                    id: 5,
+                                    logoSrc : require('@/assets/writing.png'),
+                                    title : "Notes",
+                                    subTitle : "asjfbaf",
+
+                                },
+                                {
+                                    id: 6,
+                                    logoSrc : require('@/assets/lab-coat.png'),
+                                    title : "Uniform",
+                                    subTitle : "asjfbaf",
+
+                                },
+                                ]
+                        }
+                    },
         methods:{
             scrollToElement() {
             const el = this.$refs.scrollToMe;

@@ -176,3 +176,9 @@
         width: 25px;
         margin-top: 4px;
     }
+
+    .div-bottom{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
